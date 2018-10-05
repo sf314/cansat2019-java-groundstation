@@ -1,0 +1,11 @@
+So this works on windows:
+
+javac -cp /mnt/c/Program\ Files/Java/jdk/lib/RXTXcomm.jar JGroundStation.java CSPort.java
+
+java JGroundStation 
+	if remote, complains about x11
+	else, complains about NoClassDefFound
+	Must specify path to .jar!
+	First success used .jar in Java/jdk/lib
+
+Use the x64 version of rxtx. May need to test which one to make it general.
