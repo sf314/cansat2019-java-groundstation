@@ -32,9 +32,12 @@ public class JGroundStation {
 
         // Create two subpanels:
         JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
         JLabel label = new JLabel("Pick me, ei ei!");
-        mainFrame.add(label);
+        
+        label.setForeground(Color.white);
+        panel1.setBackground(new Color(28, 28, 34));
+        panel1.add(label);
+        mainFrame.add(panel1);
 
         // Make it visible
         mainFrame.setVisible(true);

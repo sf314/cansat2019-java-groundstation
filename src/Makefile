@@ -6,3 +6,6 @@ all: *
 
 run: 
 	java JGroundStation
+
+clean:
+	rm *.class
