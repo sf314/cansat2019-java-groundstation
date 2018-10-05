@@ -30,25 +30,38 @@ public class JGroundStation {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setSize(800, 600);
 
-        // Create two subpanels:
-        JPanel panel1 = new JPanel();
-        JLabel label = new JLabel("Pick me, ei ei!");
+        // Create subpanels:
+        JLabel serialLabel = new JLabel("Serial Window");
+        serialLabel.setForeground(Color.white);
         
-        label.setForeground(Color.white);
+        JTextArea portList = new JTextArea("Available ports:");
+        portList.setForeground(Color.white);
+        portList.setBackground(new Color(28, 28, 34));
+        
+        
+        JPanel panel1 = new JPanel();
         panel1.setBackground(new Color(28, 28, 34));
-        panel1.add(label);
+        panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
+        panel1.add(serialLabel);
+        panel1.add(portList);
+        
         mainFrame.add(panel1);
 
-        // Make it visible
-        mainFrame.setVisible(true);
 
         // Test array
         CSPort port = new CSPort();
         String[] ports = port.availablePorts();
         System.out.println("Checking available ports");
+        String portStrings = "";
         for (int i = 0; i < ports.length; i++) {
             System.out.println(ports[i]);
+            portStrings = portStrings + ports[i] + "\n";
         }
+        portList.setText(portList.getText() + "\n" + portStrings);
+        
+        // Make it visible
+        mainFrame.setVisible(true);
+        
         System.out.println("Done");
     }
 
