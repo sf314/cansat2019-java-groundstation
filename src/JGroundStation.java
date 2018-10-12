@@ -38,7 +38,6 @@ public class JGroundStation {
         portList.setForeground(Color.white);
         portList.setBackground(new Color(28, 28, 34));
         
-        
         JPanel panel1 = new JPanel();
         panel1.setBackground(new Color(28, 28, 34));
         panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
