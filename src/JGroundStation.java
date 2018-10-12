@@ -37,19 +37,9 @@ public class JGroundStation {
         CSGraphPanel graphPanel = new CSGraphPanel();
         serialPanel.setBackground(new Color(48, 48, 54));
         
-        mainFrame.add(panel1);
-
-
-        // Test array
-        CSPort port = new CSPort();
-        String[] ports = port.availablePorts();
-        System.out.println("Checking available ports");
-        String portStrings = "";
-        for (int i = 0; i < ports.length; i++) {
-            System.out.println(ports[i]);
-            portStrings = portStrings + ports[i] + "\n";
-        }
-        portList.setText(portList.getText() + "\n" + portStrings);
+        mainFrame.setLayout(new BoxLayout(mainFrame.getContentPane(), BoxLayout.X_AXIS));
+        mainFrame.add(serialPanel);
+        mainFrame.add(graphPanel);
         
         // Make it visible
         mainFrame.setVisible(true);
