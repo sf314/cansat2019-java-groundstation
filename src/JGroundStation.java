@@ -29,20 +29,13 @@ public class JGroundStation {
         JFrame mainFrame = new JFrame("Main Frame");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setSize(800, 600);
-
+        
         // Create subpanels:
-        JLabel serialLabel = new JLabel("Serial Window");
-        serialLabel.setForeground(Color.white);
+        CSSerialPanel serialPanel = new CSSerialPanel();
+        serialPanel.setBackground(new Color(28, 28, 34));
         
-        JTextArea portList = new JTextArea("Available ports:");
-        portList.setForeground(Color.white);
-        portList.setBackground(new Color(28, 28, 34));
-        
-        JPanel panel1 = new JPanel();
-        panel1.setBackground(new Color(28, 28, 34));
-        panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-        panel1.add(serialLabel);
-        panel1.add(portList);
+        CSGraphPanel graphPanel = new CSGraphPanel();
+        serialPanel.setBackground(new Color(48, 48, 54));
         
         mainFrame.add(panel1);
 
