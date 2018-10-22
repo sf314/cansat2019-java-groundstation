@@ -1,1 +1,1 @@
-javac -cp ..\rxtx\RXTXcomm.jar JGroundStation.java CSPort.java
+javac -cp ..\rxtx\RXTXcomm.jar JGroundStation.java CSPort.java CSGraphPanel.java CSSerialPanel.java 
