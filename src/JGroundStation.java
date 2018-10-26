@@ -32,10 +32,8 @@ public class JGroundStation {
         
         // Create subpanels:
         CSSerialPanel serialPanel = new CSSerialPanel();
-        serialPanel.setBackground(new Color(28, 28, 34));
         
         CSGraphPanel graphPanel = new CSGraphPanel();
-        serialPanel.setBackground(new Color(48, 48, 54));
         
         mainFrame.setLayout(new BoxLayout(mainFrame.getContentPane(), BoxLayout.X_AXIS));
         mainFrame.add(serialPanel);

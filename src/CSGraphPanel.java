@@ -10,6 +10,18 @@ public class CSGraphPanel extends JPanel {
     // Data vars 
     
     // Constructor 
+    public CSGraphPanel() {
+        // Initialize
+        super();
+        
+        
+        // Create subpanels
+        
+        // Add subpanels with layout
+        
+        // Assign colour
+        this.setBackground(new Color(48, 48, 54));
+    }
     
     // Functions
     
