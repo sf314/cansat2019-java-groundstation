@@ -8,13 +8,13 @@ import java.io.*;
 
 public class CSSerialPanel extends JPanel {
     // Data vars 
-    CSPort port;
+    //CSPort port;
     
     // Constructor 
     public CSSerialPanel() {
         // Initialize
         super();
-        port = new CSPort();
+        //port = new CSPort();
         
         // Create subpanels
         
