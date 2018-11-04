@@ -13,6 +13,8 @@ public class CSGraphPanel extends JPanel {
     public CSGraphPanel() {
         // Initialize
         super();
+        CSGraph myGraph = new CSGraph();
+        
         
         
         // Create subpanels

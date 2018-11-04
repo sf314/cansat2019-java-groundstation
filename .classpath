@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="rxtx/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="rxtx/Windows/win_ia64/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="rxtx/Windows/win_x64/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="rxtx/Windows/win_x86/RXTXcomm.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
