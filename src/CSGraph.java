@@ -7,7 +7,11 @@ import java.util.LinkedList;
 
 public class CSGraph extends JPanel {
 	private Queue<Double> pointQueue = new LinkedList<Double>();
+	private String name;
+	private String units;
 	public CSGraph() {
+		name = "";
+		units = "";
 		System.out.println("new CSGraph");
 		GenerateTestPoints();
 		GenerateTestPoints();
@@ -40,5 +44,17 @@ public class CSGraph extends JPanel {
 		double temp=(Math.random()*100)+1;	
 		AddPoints(temp);
 		}
+	}
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	public String getUnits(){
+		return units;
+	}
+	public void setUnits(String units){
+		this.units = units;
 	}
 }
