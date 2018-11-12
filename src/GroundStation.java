@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Kabir
+ * 
  */
 public class GroundStation extends javax.swing.JFrame {
 
