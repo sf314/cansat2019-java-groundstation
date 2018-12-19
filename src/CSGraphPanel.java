@@ -21,13 +21,13 @@ public class CSGraphPanel extends JPanel {
     	for(int i = 0; i < numGraphs; i++) {
     		tempName = ("Graph " + Integer.toString((i+1)));
     		graph = new CSGraph(tempName);
-    		graph.setSize(400, (600/numGraphs));
+    		// graph.setSize(400, (600/numGraphs));
     		graph.setVisible(true);
     		graphList.add(graph);
     	}
 
         // Add subpanels with layout
-        this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+        this.setLayout(new GridLayout(4, 2, 25, 25));
         while(!graphList.isEmpty()) {
         	this.add(graphList.poll());
         }
