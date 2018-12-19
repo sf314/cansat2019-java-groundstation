@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class CSGraphPanel extends JPanel {
     // Data vars 
-    int numGraphs = 4;
+    int numGraphs = 8;
     LinkedList<CSGraph> graphList = new LinkedList<CSGraph>();
     String tempName;
     CSGraph graph;
