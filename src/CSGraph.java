@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class CSGraph extends JPanel {
 	private int lineWidth;
-	private Queue<Double> pointQueue = new LinkedList<Double>();
+	private LinkedList<Double> pointList = new LinkedList<Double>();
 	private String name;
 	private String units;
 	public CSGraph(String name) {
@@ -17,15 +17,16 @@ public class CSGraph extends JPanel {
 		JLabel lab = new JLabel(name); this.add(lab);
 		System.out.println("new CSGraph");
 		GenerateTestPoints();
-		GenerateTestPoints();
-		System.out.println(pointQueue.size());
+		System.out.println(pointList.size());
 	}
 	public void paintComponent(Graphics g)
 	{
+		System.out.println("Repainting graph " + name + " with " + pointList.size() + " points");
 		super.paintComponent(g);
-		for(int i = 0; i<pointQueue.size(); i++)
+		for(int i = 0; i<pointList.size(); i++)
 		{
-		g.fillOval(i, pointQueue.poll().intValue(), lineWidth, lineWidth);
+			g.setColor(new Color(50, 200, 50));
+			g.fillOval(i, pointList.get(i).intValue(), lineWidth, lineWidth);
 		}
 	}
 	public void AddPoints(double a){
