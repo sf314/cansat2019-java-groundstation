@@ -30,8 +30,11 @@ public class CSGraph extends JPanel {
 		}
 	}
 	public void AddPoints(double a){
-		System.out.println(a);
-		pointQueue.add(a);
+		// System.out.println(a);
+		pointList.add(a);
+		if (pointList.size() > 200) {
+			pointList.remove(); // Remove head of list
+		}
 	}
 	public void GenerateTestPoints(){		
 		for(int i=0;i<200;i++){
