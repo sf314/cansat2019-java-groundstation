@@ -9,10 +9,13 @@ public class CSGraph extends JPanel {
 	
 	private int lineWidth;
 	private LinkedList<Double> pointList = new LinkedList<Double>();
+	private int maxPoints;
 	private String name;
 	private String units;
 	
 	public CSGraph(String name) {
+		this.maxPoints = 200;
+
 		this.lineWidth = 3;
 		this.units = "";
 		this.name = name;
@@ -38,7 +41,7 @@ public class CSGraph extends JPanel {
 	public void AddPoints(double a){
 		// System.out.println(a);
 		pointList.add(a);
-		if (pointList.size() > 200) {
+		if (pointList.size() > this.maxPoints) {
 			pointList.remove(); // Remove head of list
 		}
 	}
