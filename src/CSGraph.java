@@ -29,10 +29,28 @@ public class CSGraph extends JPanel {
 	{
 		System.out.println("Repainting graph " + name + " with " + pointList.size() + " points");
 		super.paintComponent(g);
+
+		// Calculate max value (for height adjustment)
+		int maxVal = 5;
+		for (int i = 0; i < pointList.size(); i++) {
+			if (pointList.get(i).intValue() > maxVal) {
+				maxVal = pointList.get(i).intValue();
+			}
+		}
+
+		// Get current width/height
+		int width = this.getWidth();
+		int height = this.getHeight();
+		int numPoints = pointList.size();
+
 		for(int i = 0; i<pointList.size(); i++)
 		{
 			g.setColor(new Color(50, 200, 50));
-			g.fillOval(i, pointList.get(i).intValue(), lineWidth, lineWidth);
+
+			// Map values to coordinates
+			int x = i * width / (numPoints - 1);
+			int y = pointList.get(i).intValue() * height / maxVal;
+			g.fillOval(x, y, lineWidth, lineWidth);
 		}
 		
 		this.setBackground(new Color(42, 42, 50));
