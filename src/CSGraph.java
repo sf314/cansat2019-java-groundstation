@@ -11,6 +11,7 @@ public class CSGraph extends JPanel {
 	private LinkedList<Double> pointList = new LinkedList<Double>();
 	private int maxPoints;
 	private String name;
+	private JLabel label;
 	private String units;
 	
 	public CSGraph(String name) {
@@ -18,8 +19,12 @@ public class CSGraph extends JPanel {
 
 		this.lineWidth = 3;
 		this.units = "";
+
 		this.name = name;
-		JLabel lab = new JLabel(name); this.add(lab);
+		this.label = new JLabel(name); 
+		this.label.setForeground(Color.white);
+		this.add(label);
+		
 		System.out.println("new CSGraph");
 		System.out.println(pointList.size());
 	}
@@ -38,8 +43,9 @@ public class CSGraph extends JPanel {
 		}
 
 		// Get current width/height
+		int labelHeight = this.label.getHeight() + 5;
 		int width = this.getWidth();
-		int height = this.getHeight();
+		int height = this.getHeight() - labelHeight;
 		int numPoints = pointList.size();
 
 		for(int i = 0; i<pointList.size(); i++)
@@ -48,7 +54,7 @@ public class CSGraph extends JPanel {
 
 			// Map values to coordinates
 			int x = i * width / (numPoints - 1);
-			int y = pointList.get(i).intValue() * height / maxVal;
+			int y = (pointList.get(i).intValue() * height / maxVal) + labelHeight;
 			g.fillOval(x, y, lineWidth, lineWidth);
 		}
 		
