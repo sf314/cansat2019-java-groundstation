@@ -21,7 +21,6 @@ public class CSGraph extends JPanel {
 		this.name = name;
 		JLabel lab = new JLabel(name); this.add(lab);
 		System.out.println("new CSGraph");
-		GenerateTestPoints();
 		System.out.println(pointList.size());
 	}
 	

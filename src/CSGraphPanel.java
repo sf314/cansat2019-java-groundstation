@@ -21,7 +21,7 @@ public class CSGraphPanel extends JPanel {
     	for(int i = 0; i < numGraphs; i++) {
     		tempName = ("Graph " + Integer.toString((i+1)));
     		graph = new CSGraph(tempName);
-    		// graph.setSize(400, (600/numGraphs));
+            graph.GenerateTestPoints(); // For testing
     		graph.setVisible(true);
     		graphList.add(graph);
     	}
