@@ -12,7 +12,6 @@ public class CSGraphPanel extends JPanel {
     int numGraphs = 8;
     LinkedList<CSGraph> graphList = new LinkedList<CSGraph>();
     String tempName;
-    CSGraph graph;
 
     // Constructor 
     public CSGraphPanel() {
@@ -20,7 +19,7 @@ public class CSGraphPanel extends JPanel {
     	super();
     	for(int i = 0; i < numGraphs; i++) {
     		tempName = ("Graph " + Integer.toString((i+1)));
-    		graph = new CSGraph(tempName);
+    		CSGraph graph = new CSGraph(tempName);
             graph.GenerateTestPoints(); // For testing
     		graph.setVisible(true);
     		graphList.add(graph);
